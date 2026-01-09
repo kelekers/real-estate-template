@@ -2,6 +2,8 @@ import Hero from "@/components/sections/hero";
 import PropertyCard from "@/components/property/property-card";
 import { client } from "@/lib/sanity";
 
+export const dynamic = 'force-dynamic';
+
 // Fungsi untuk ambil data dari Sanity (GROQ Query)
 async function getProperties() {
   const query = `*[_type == "property"] | order(_createdAt desc) [0...6]`;
